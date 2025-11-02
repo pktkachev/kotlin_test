@@ -45823,6 +45823,70 @@ public class LLPartialDiagnosticsFe10TestGenerated extends AbstractLLPartialDiag
     }
 
     @Nested
+    @TestMetadata("compiler/testData/diagnostics/tests/tkachev_when")
+    @TestDataPath("$PROJECT_ROOT")
+    public class Tkachev_when {
+      @Test
+      public void testAllFilesPresentInTkachev_when() {
+        KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/diagnostics/tests/tkachev_when"), Pattern.compile("^(.+)\\.(kt|kts)$"), Pattern.compile("^(.+)\\.(reversed|partialBody|fir|ll|latestLV)\\.kts?$"), true);
+      }
+
+      @Test
+      @TestMetadata("branchConditionEmpty.kt")
+      public void testBranchConditionEmpty() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/branchConditionEmpty.kt");
+      }
+
+      @Test
+      @TestMetadata("branchConditionOverlapSimple.kt")
+      public void testBranchConditionOverlapSimple() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/branchConditionOverlapSimple.kt");
+      }
+
+      @Test
+      @TestMetadata("branchConditionOverlapViaConstant.kt")
+      public void testBranchConditionOverlapViaConstant() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/branchConditionOverlapViaConstant.kt");
+      }
+
+      @Test
+      @TestMetadata("expressionImplicitlyExhaustive.kt")
+      public void testExpressionImplicitlyExhaustive() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/expressionImplicitlyExhaustive.kt");
+      }
+
+      @Test
+      @TestMetadata("expressionNotExhaustiveEnum.kt")
+      public void testExpressionNotExhaustiveEnum() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/expressionNotExhaustiveEnum.kt");
+      }
+
+      @Test
+      @TestMetadata("noSubjectNotABooleanCondition.kt")
+      public void testNoSubjectNotABooleanCondition() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/noSubjectNotABooleanCondition.kt");
+      }
+
+      @Test
+      @TestMetadata("orderOfBranches.kt")
+      public void testOrderOfBranches() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/orderOfBranches.kt");
+      }
+
+      @Test
+      @TestMetadata("returnIncompatibleType.kt")
+      public void testReturnIncompatibleType() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/returnIncompatibleType.kt");
+      }
+
+      @Test
+      @TestMetadata("subjectIncompatibleType.kt")
+      public void testSubjectIncompatibleType() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/subjectIncompatibleType.kt");
+      }
+    }
+
+    @Nested
     @TestMetadata("compiler/testData/diagnostics/tests/traitWithRequired")
     @TestDataPath("$PROJECT_ROOT")
     public class TraitWithRequired {
