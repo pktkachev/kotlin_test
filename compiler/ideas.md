@@ -25,15 +25,13 @@ Should it be like that? When is a statement in this case, but requires to be exh
 
 Tests ideas, if not implemented yet, are added here
 
-### If your when expression doesn't have a subject, you must have an else branch
+### Expression without a subject must have an else branch
 
 ## Green code
 
 Tests ideas, if not implemented yet, are added here
 
 ### Should accept boolean functions as branch condition
-
-### Is function a valid subject?
 
 ## IDE Integration (hints&improvements)
 
