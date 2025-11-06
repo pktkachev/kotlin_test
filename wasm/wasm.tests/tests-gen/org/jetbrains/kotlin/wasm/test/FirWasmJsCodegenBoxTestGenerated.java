@@ -61346,6 +61346,94 @@ public class FirWasmJsCodegenBoxTestGenerated extends AbstractFirWasmJsCodegenBo
   }
 
   @Nested
+  @TestMetadata("compiler/testData/codegen/box/tkachev_when")
+  @TestDataPath("$PROJECT_ROOT")
+  public class Tkachev_when {
+    @Test
+    public void testAllFilesPresentInTkachev_when() {
+      KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/tkachev_when"), Pattern.compile("^([^_](.+))\\.kt$"), null, true);
+    }
+
+    @Test
+    @TestMetadata("expressionCombinedBranches.kt")
+    public void testExpressionCombinedBranches() {
+      runTest("compiler/testData/codegen/box/tkachev_when/expressionCombinedBranches.kt");
+    }
+
+    @Test
+    @TestMetadata("expressionOnlyOneBranchExecutes.kt")
+    public void testExpressionOnlyOneBranchExecutes() {
+      runTest("compiler/testData/codegen/box/tkachev_when/expressionOnlyOneBranchExecutes.kt");
+    }
+
+    @Test
+    @TestMetadata("noSubjectAlwaysFalseBranch.kt")
+    public void testNoSubjectAlwaysFalseBranch() {
+      runTest("compiler/testData/codegen/box/tkachev_when/noSubjectAlwaysFalseBranch.kt");
+    }
+
+    @Test
+    @TestMetadata("noSubjectAlwaysTrueBranch.kt")
+    public void testNoSubjectAlwaysTrueBranch() {
+      runTest("compiler/testData/codegen/box/tkachev_when/noSubjectAlwaysTrueBranch.kt");
+    }
+
+    @Test
+    @TestMetadata("noSubjectOnlyFirstTrueExecutes.kt")
+    public void testNoSubjectOnlyFirstTrueExecutes() {
+      runTest("compiler/testData/codegen/box/tkachev_when/noSubjectOnlyFirstTrueExecutes.kt");
+    }
+
+    @Test
+    @TestMetadata("nullableIsAcceptableSubject.kt")
+    public void testNullableIsAcceptableSubject() {
+      runTest("compiler/testData/codegen/box/tkachev_when/nullableIsAcceptableSubject.kt");
+    }
+
+    @Test
+    @TestMetadata("onlyDefaultBranch.kt")
+    public void testOnlyDefaultBranch() {
+      runTest("compiler/testData/codegen/box/tkachev_when/onlyDefaultBranch.kt");
+    }
+
+    @Test
+    @TestMetadata("statementChangeSubject.kt")
+    public void testStatementChangeSubject() {
+      runTest("compiler/testData/codegen/box/tkachev_when/statementChangeSubject.kt");
+    }
+
+    @Test
+    @TestMetadata("statementCombinedBranches.kt")
+    public void testStatementCombinedBranches() {
+      runTest("compiler/testData/codegen/box/tkachev_when/statementCombinedBranches.kt");
+    }
+
+    @Test
+    @TestMetadata("statementDefaultBranchExecution.kt")
+    public void testStatementDefaultBranchExecution() {
+      runTest("compiler/testData/codegen/box/tkachev_when/statementDefaultBranchExecution.kt");
+    }
+
+    @Test
+    @TestMetadata("statementNoBranchExecutes.kt")
+    public void testStatementNoBranchExecutes() {
+      runTest("compiler/testData/codegen/box/tkachev_when/statementNoBranchExecutes.kt");
+    }
+
+    @Test
+    @TestMetadata("statementOnlyOneBranchExecutes.kt")
+    public void testStatementOnlyOneBranchExecutes() {
+      runTest("compiler/testData/codegen/box/tkachev_when/statementOnlyOneBranchExecutes.kt");
+    }
+
+    @Test
+    @TestMetadata("unitIsAcceptableSubject.kt")
+    public void testUnitIsAcceptableSubject() {
+      runTest("compiler/testData/codegen/box/tkachev_when/unitIsAcceptableSubject.kt");
+    }
+  }
+
+  @Nested
   @TestMetadata("compiler/testData/codegen/box/toArray")
   @TestDataPath("$PROJECT_ROOT")
   public class ToArray {

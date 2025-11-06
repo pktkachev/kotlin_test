@@ -45823,6 +45823,138 @@ public class LLReversedDiagnosticsFe10TestGenerated extends AbstractLLReversedDi
     }
 
     @Nested
+    @TestMetadata("compiler/testData/diagnostics/tests/tkachev_when")
+    @TestDataPath("$PROJECT_ROOT")
+    public class Tkachev_when {
+      @Test
+      public void testAllFilesPresentInTkachev_when() {
+        KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/diagnostics/tests/tkachev_when"), Pattern.compile("^(.+)\\.(kt|kts)$"), Pattern.compile("^(.+)\\.(reversed|partialBody|fir|ll|latestLV)\\.kts?$"), true);
+      }
+
+      @Test
+      @TestMetadata("branchConditionEmpty.kt")
+      public void testBranchConditionEmpty() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/branchConditionEmpty.kt");
+      }
+
+      @Test
+      @TestMetadata("branchConditionOverlapSimple.kt")
+      public void testBranchConditionOverlapSimple() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/branchConditionOverlapSimple.kt");
+      }
+
+      @Test
+      @TestMetadata("branchConditionOverlapViaConstant.kt")
+      public void testBranchConditionOverlapViaConstant() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/branchConditionOverlapViaConstant.kt");
+      }
+
+      @Test
+      @TestMetadata("noSubjectNotABooleanCondition.kt")
+      public void testNoSubjectNotABooleanCondition() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/noSubjectNotABooleanCondition.kt");
+      }
+
+      @Test
+      @TestMetadata("orderOfBranches.kt")
+      public void testOrderOfBranches() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/orderOfBranches.kt");
+      }
+
+      @Test
+      @TestMetadata("returnIncompatibleType.kt")
+      public void testReturnIncompatibleType() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/returnIncompatibleType.kt");
+      }
+
+      @Test
+      @TestMetadata("subjectIncompatibleType.kt")
+      public void testSubjectIncompatibleType() {
+        runTest("compiler/testData/diagnostics/tests/tkachev_when/subjectIncompatibleType.kt");
+      }
+
+      @Nested
+      @TestMetadata("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue")
+      @TestDataPath("$PROJECT_ROOT")
+      public class BreakAndContinue {
+        @Test
+        public void testAllFilesPresentInBreakAndContinue() {
+          KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue"), Pattern.compile("^(.+)\\.(kt|kts)$"), Pattern.compile("^(.+)\\.(reversed|partialBody|fir|ll|latestLV)\\.kts?$"), true);
+        }
+
+        @Test
+        @TestMetadata("breakIsNotAllowedOnExpression.kt")
+        public void testBreakIsNotAllowedOnExpression() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/breakIsNotAllowedOnExpression.kt");
+        }
+
+        @Test
+        @TestMetadata("breakIsNotAllowedOnExpressionNoSubject.kt")
+        public void testBreakIsNotAllowedOnExpressionNoSubject() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/breakIsNotAllowedOnExpressionNoSubject.kt");
+        }
+
+        @Test
+        @TestMetadata("breakIsNotAllowedOnWhenStatement.kt")
+        public void testBreakIsNotAllowedOnWhenStatement() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/breakIsNotAllowedOnWhenStatement.kt");
+        }
+
+        @Test
+        @TestMetadata("breakIsNotAllowedOnWhenStatementNoSubject.kt")
+        public void testBreakIsNotAllowedOnWhenStatementNoSubject() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/breakIsNotAllowedOnWhenStatementNoSubject.kt");
+        }
+
+        @Test
+        @TestMetadata("continueIsNotAllowedOnExpression.kt")
+        public void testContinueIsNotAllowedOnExpression() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/continueIsNotAllowedOnExpression.kt");
+        }
+
+        @Test
+        @TestMetadata("continueIsNotAllowedOnExpressionNoSubject.kt")
+        public void testContinueIsNotAllowedOnExpressionNoSubject() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/continueIsNotAllowedOnExpressionNoSubject.kt");
+        }
+
+        @Test
+        @TestMetadata("continueIsNotAllowedOnWhenStatement.kt")
+        public void testContinueIsNotAllowedOnWhenStatement() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/continueIsNotAllowedOnWhenStatement.kt");
+        }
+
+        @Test
+        @TestMetadata("continueIsNotAllowedOnWhenStatementNoSubject.kt")
+        public void testContinueIsNotAllowedOnWhenStatementNoSubject() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/continueIsNotAllowedOnWhenStatementNoSubject.kt");
+        }
+      }
+
+      @Nested
+      @TestMetadata("compiler/testData/diagnostics/tests/tkachev_when/exhaustiveness")
+      @TestDataPath("$PROJECT_ROOT")
+      public class Exhaustiveness {
+        @Test
+        public void testAllFilesPresentInExhaustiveness() {
+          KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/diagnostics/tests/tkachev_when/exhaustiveness"), Pattern.compile("^(.+)\\.(kt|kts)$"), Pattern.compile("^(.+)\\.(reversed|partialBody|fir|ll|latestLV)\\.kts?$"), true);
+        }
+
+        @Test
+        @TestMetadata("expressionImplicitlyExhaustive.kt")
+        public void testExpressionImplicitlyExhaustive() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/exhaustiveness/expressionImplicitlyExhaustive.kt");
+        }
+
+        @Test
+        @TestMetadata("expressionNotExhaustiveEnum.kt")
+        public void testExpressionNotExhaustiveEnum() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/exhaustiveness/expressionNotExhaustiveEnum.kt");
+        }
+      }
+    }
+
+    @Nested
     @TestMetadata("compiler/testData/diagnostics/tests/traitWithRequired")
     @TestDataPath("$PROJECT_ROOT")
     public class TraitWithRequired {
