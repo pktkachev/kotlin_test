@@ -45884,6 +45884,52 @@ public class LLReversedDiagnosticsFe10TestGenerated extends AbstractLLReversedDi
       public void testSubjectIncompatibleType() {
         runTest("compiler/testData/diagnostics/tests/tkachev_when/subjectIncompatibleType.kt");
       }
+
+      @Nested
+      @TestMetadata("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue")
+      @TestDataPath("$PROJECT_ROOT")
+      public class BreakAndContinue {
+        @Test
+        public void testAllFilesPresentInBreakAndContinue() {
+          KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue"), Pattern.compile("^(.+)\\.(kt|kts)$"), Pattern.compile("^(.+)\\.(reversed|partialBody|fir|ll|latestLV)\\.kts?$"), true);
+        }
+
+        @Test
+        @TestMetadata("breakIsNotAllowedOnExpressionNoSubject.kt")
+        public void testBreakIsNotAllowedOnExpressionNoSubject() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/breakIsNotAllowedOnExpressionNoSubject.kt");
+        }
+
+        @Test
+        @TestMetadata("breakIsNotAllowedOnWhenStatement.kt")
+        public void testBreakIsNotAllowedOnWhenStatement() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/breakIsNotAllowedOnWhenStatement.kt");
+        }
+
+        @Test
+        @TestMetadata("breakIsNotAllowedOnWhenStatementNoSubject.kt")
+        public void testBreakIsNotAllowedOnWhenStatementNoSubject() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/breakIsNotAllowedOnWhenStatementNoSubject.kt");
+        }
+
+        @Test
+        @TestMetadata("continueIsNotAllowedOnExpressionNoSubject.kt")
+        public void testContinueIsNotAllowedOnExpressionNoSubject() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/continueIsNotAllowedOnExpressionNoSubject.kt");
+        }
+
+        @Test
+        @TestMetadata("continueIsNotAllowedOnWhenStatement.kt")
+        public void testContinueIsNotAllowedOnWhenStatement() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/continueIsNotAllowedOnWhenStatement.kt");
+        }
+
+        @Test
+        @TestMetadata("continueIsNotAllowedOnWhenStatementNoSubject.kt")
+        public void testContinueIsNotAllowedOnWhenStatementNoSubject() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/continueIsNotAllowedOnWhenStatementNoSubject.kt");
+        }
+      }
     }
 
     @Nested
