@@ -1,10 +1,10 @@
-// RUN_PIPELINE_TILL: BACKEND
+// RUN_PIPELINE_TILL: FRONTEND
 enum class E {
     A, B, C
 }
 
 fun foo(a: E): String {
-    return when (a) {
+    return <!NO_ELSE_IN_WHEN!>when<!> (a) {
         E.A -> "A"
         E.B -> "B"
     }

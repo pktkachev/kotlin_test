@@ -45850,18 +45850,6 @@ public class LLDiagnosticsFe10TestGenerated extends AbstractLLDiagnosticsTest {
       }
 
       @Test
-      @TestMetadata("expressionImplicitlyExhaustive.kt")
-      public void testExpressionImplicitlyExhaustive() {
-        runTest("compiler/testData/diagnostics/tests/tkachev_when/expressionImplicitlyExhaustive.kt");
-      }
-
-      @Test
-      @TestMetadata("expressionNotExhaustiveEnum.kt")
-      public void testExpressionNotExhaustiveEnum() {
-        runTest("compiler/testData/diagnostics/tests/tkachev_when/expressionNotExhaustiveEnum.kt");
-      }
-
-      @Test
       @TestMetadata("noSubjectNotABooleanCondition.kt")
       public void testNoSubjectNotABooleanCondition() {
         runTest("compiler/testData/diagnostics/tests/tkachev_when/noSubjectNotABooleanCondition.kt");
@@ -45895,6 +45883,12 @@ public class LLDiagnosticsFe10TestGenerated extends AbstractLLDiagnosticsTest {
         }
 
         @Test
+        @TestMetadata("breakIsNotAllowedOnExpression.kt")
+        public void testBreakIsNotAllowedOnExpression() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/breakIsNotAllowedOnExpression.kt");
+        }
+
+        @Test
         @TestMetadata("breakIsNotAllowedOnExpressionNoSubject.kt")
         public void testBreakIsNotAllowedOnExpressionNoSubject() {
           runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/breakIsNotAllowedOnExpressionNoSubject.kt");
@@ -45913,6 +45907,12 @@ public class LLDiagnosticsFe10TestGenerated extends AbstractLLDiagnosticsTest {
         }
 
         @Test
+        @TestMetadata("continueIsNotAllowedOnExpression.kt")
+        public void testContinueIsNotAllowedOnExpression() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/continueIsNotAllowedOnExpression.kt");
+        }
+
+        @Test
         @TestMetadata("continueIsNotAllowedOnExpressionNoSubject.kt")
         public void testContinueIsNotAllowedOnExpressionNoSubject() {
           runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/continueIsNotAllowedOnExpressionNoSubject.kt");
@@ -45928,6 +45928,28 @@ public class LLDiagnosticsFe10TestGenerated extends AbstractLLDiagnosticsTest {
         @TestMetadata("continueIsNotAllowedOnWhenStatementNoSubject.kt")
         public void testContinueIsNotAllowedOnWhenStatementNoSubject() {
           runTest("compiler/testData/diagnostics/tests/tkachev_when/breakAndContinue/continueIsNotAllowedOnWhenStatementNoSubject.kt");
+        }
+      }
+
+      @Nested
+      @TestMetadata("compiler/testData/diagnostics/tests/tkachev_when/exhaustiveness")
+      @TestDataPath("$PROJECT_ROOT")
+      public class Exhaustiveness {
+        @Test
+        public void testAllFilesPresentInExhaustiveness() {
+          KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/diagnostics/tests/tkachev_when/exhaustiveness"), Pattern.compile("^(.+)\\.(kt|kts)$"), Pattern.compile("^(.+)\\.(reversed|partialBody|fir|ll|latestLV)\\.kts?$"), true);
+        }
+
+        @Test
+        @TestMetadata("expressionImplicitlyExhaustive.kt")
+        public void testExpressionImplicitlyExhaustive() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/exhaustiveness/expressionImplicitlyExhaustive.kt");
+        }
+
+        @Test
+        @TestMetadata("expressionNotExhaustiveEnum.kt")
+        public void testExpressionNotExhaustiveEnum() {
+          runTest("compiler/testData/diagnostics/tests/tkachev_when/exhaustiveness/expressionNotExhaustiveEnum.kt");
         }
       }
     }
